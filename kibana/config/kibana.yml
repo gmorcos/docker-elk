@@ -5,7 +5,7 @@
 server.name: kibana
 server.host: 0.0.0.0
 elasticsearch.hosts: [ http://elasticsearch:9200 ]
-
+enterpriseSearch.host: http://localhost:3002
 monitoring.ui.container.elasticsearch.enabled: true
 monitoring.ui.container.logstash.enabled: true
 
@@ -13,7 +13,7 @@ monitoring.ui.container.logstash.enabled: true
 #
 elasticsearch.username: kibana_system
 elasticsearch.password: ${KIBANA_SYSTEM_PASSWORD}
-
+xpack.encryptedSavedObjects.encryptionKey: 96520d36bc550809be2d5d9d34e36d200f854a7d79ffe924f0297156fe4ef0f3
 ## Fleet
 ## https://www.elastic.co/guide/en/kibana/current/fleet-settings-kb.html
 #
