@@ -105,3 +105,5 @@ networks:
 volumes:
   setup:
   elasticsearch:
+  enterprisesearchdata:
+    driver: local
