@@ -98,6 +98,21 @@ services:
       - elasticsearch
     restart: unless-stopped
 
+  apm-server:
+    image: elastdocker/apm-server:${ELASTIC_VERSION}
+    build:
+      context: apm-server/
+      args:
+        ELASTIC_VERSION: ${ELASTIC_VERSION}
+    restart: unless-stopped
+    ports:
+      - "8200:8200"
+    volumes:
+      - ./apm-server/config/apm-server.yml:/usr/share/apm-server/apm-server.yml:ro,z
+    environment:
+      ELASTIC_USERNAME: ${ELASTIC_USERNAME}
+      ELASTIC_PASSWORD: ${ELASTIC_PASSWORD}
+      ELASTIC_APM_SECRET_TOKEN: MGQyWllJZ0JqMEFIZmxVbS1pSUw6Z1RrNlRTZ0tSTDZNaGVmZGZTR3JkQQ==
 networks:
   elk:
     driver: bridge
