@@ -16,4 +16,4 @@ services:
       - elk
     depends_on:
       - logstash
-    restart: on-failure
+    restart: unless-stopped
