@@ -14,7 +14,7 @@ To include Metricbeat in the stack, run Docker Compose from the root of the repo
 argument referencing the `metricbeat-compose.yml` file:
 
 ```console
-$ docker-compose -f docker-compose.yml -f extensions/metricbeat/metricbeat-compose.yml up
+$ docker-compose -f docker-compose.yml -f extensions/metricbeat/metricbeat-compose.yml up -d
 ```
 
 ## Configuring Metricbeat
