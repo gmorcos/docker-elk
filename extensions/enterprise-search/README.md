@@ -70,7 +70,7 @@ To include Enterprise Search in the stack, run Docker Compose from the root of t
 line argument referencing the `enterprise-search-compose.yml` file:
 
 ```console
-$ docker-compose -f docker-compose.yml -f extensions/enterprise-search/enterprise-search-compose.yml up
+$ docker-compose -f docker-compose.yml -f extensions/enterprise-search/enterprise-search-compose.yml up -d
 ```
 
 Allow a few minutes for the stack to start, then open your web browser at the address <http://localhost:3002> to see the
